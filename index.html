@@ -6,13 +6,39 @@
         font-family: "Courier New", monospace;
         line-height: 0;
       }
+      .inline{
+        display: inline-block;
+      }
+      .select{
+        width: 200px;
+        height: 100px;
+      }
+      div > input{
+        display: inline-block;
+      }
+      div > h1{
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
   <div id = "headers">
     <h1>Mario 2</h1>
-    <h3>&nbsp; &nbsp; &nbsp; &nbsp; Behold this wonderful pyramid:</h3>
 	</div>
+  <div>
+    <div class = "inline select">
+    <select id = "select">
+      <option data-color = "#">#</option>
+      <option data-color = "$">$</option>
+      <option data-color = "%">%</option>
+    </select>
+  </div>
+<div class = "inline range">
+    <input id = "range" type="range" min="1" max="10" default value="6">
+    <h1 class = "rangelabel">a<h1>
+    </div>
+
+  </div>
     <div id="pyramid">
       <!-- Our pyramid will go inside here -->
       <div id="construction">
@@ -20,17 +46,17 @@
         <p>Check back again soon... our developers are hard at wrk as we speak!</p>
       </div>
     </div>
-    <script src="mario.js"></script>
+    <script src="script.js"></script>
 	<script>
-		var h1 = document.querySelector("h1");
-		var div = document.querySelector("#headers");
-		div.addEventListener("click", function(e){
-			console.log("div clicked");
-		});
-		h1.addEventListener("click", function(e){
-			console.log("h1 clicked");
-			e.stopPropagation();
-		});
+		// var h1 = document.querySelector("h1");
+		// var div = document.querySelector("#headers");
+		// div.addEventListener("click", function(e){
+		// 	console.log("div clicked");
+		// });
+		// h1.addEventListener("click", function(e){
+		// 	console.log("h1 clicked");
+		// 	e.stopPropagation();
+		// });
 	</script>
   </body>
 ?</html>
